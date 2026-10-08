@@ -125,6 +125,82 @@ ol {
 }
 
 
+/* ---------- 3. Componentes ---------- */
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 2px solid #206DDD;
+    font-family: "Gotham", Arial, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #206DDD;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #154EA3;
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    color: #206DDD;
+}
+
+.btn-secondary:hover {
+    background-color: #CCE5FF;
+}
+
+/* Etiqueta pequena (categorias, sprints, tecnologias) */
+.tag {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 30px;
+    background-color: #CCE5FF;
+    color: #154EA3;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Card: um único estilo para todos os blocos com borda */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #CCE5FF;
+    border-radius: 16px;
+    padding: 32px;
+}
+
+/* Card com borda azul (sprint atual no roadmap) */
+.card-destaque {
+    border: 2px solid #206DDD;
+}
+
+/* Card com lista separada por linhas (página Sobre) */
+.card-lista h3 {
+    padding-bottom: 16px;
+    border-bottom: 2px solid #206DDD;
+}
+
+.card-lista li {
+    padding: 14px 0;
+    border-bottom: 1px solid #CCE5FF;
+}
+
+/* Número em destaque dentro dos cards */
+.numero {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #206DDD;
+}
+
+
 /* ---------- 4. Header e menu ---------- */
 .site-header {
     background-color: #206DDD;
@@ -205,4 +281,61 @@ ol {
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #CCE5FF;
+}
+
+
+/* ---------- 6. Página inicial ---------- */
+.hero {
+    background-color: #F2F8FF;
+    padding: 96px 0;
+}
+
+.hero .linha {
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #206DDD;
+}
+
+/* Bolinha azul com o número de cada passo */
+.passo {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #206DDD;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* Faixa azul de chamada para doação */
+.cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: #206DDD;
+    border-radius: 16px;
+    padding: 56px;
+}
+
+.cta-box h2,
+.cta-box p {
+    color: #FFFFFF;
+}
+
+.cta-box .btn-primary {
+    background-color: #FFFFFF;
+    color: #206DDD;
+    white-space: nowrap;
 }
