@@ -41,7 +41,109 @@
 
     <!-- ----- CONTEÚDO PRINCIPAL ----- -->
     <main>
-      <!-- conteúdo da página -->
+      <!-- Título da página -->
+
+      <section class="section section-alt">
+        <div class="container">
+          <h1>Contato</h1>
+          <p>
+            Tem uma dúvida, sugestão ou quer ajudar de outro jeito? Fale com a
+            gente.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container linha">
+          <!-- Formulário -->
+
+          <form class="card col-2" action="#" method="post">
+            <h2>Fale com a gente</h2>
+
+            <div class="form-group">
+              <label for="nome">Seu nome</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Ex.: Maria da Silva"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(11) 90000-0000"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Seu e-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="voce@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto" required>
+                <option value="">Selecione um assunto</option>
+                <option value="doacao">Doação</option>
+                <option value="nota-fiscal">Nota Fiscal Paulista</option>
+                <option value="voluntario">Quero ser voluntário</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Digite a sua mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Escreva aqui como podemos ajudar"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Enviar mensagem
+            </button>
+          </form>
+
+          <!-- Informações extras -->
+
+          <aside class="col-2">
+            <div class="card">
+              <h3>Sua dúvida não está no FAQ? Nos contate.</h3>
+              <p>
+                Deixe seu e-mail ou telefone para retornarmos o contato
+                (Formulario em desenvolvimento ainda).
+              </p>
+            </div>
+            <div class="card">
+              <h3>Dúvidas rápidas?</h3>
+              <p>
+                Veja as <a href="faq.html">perguntas frequentes</a> antes de
+                escrever.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Quer conhecer o projeto?</h3>
+              <p>
+                Veja na página <a href="sobre.html">Sobre o projeto</a> o
+                problema e a nossa solução.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
     </main>
 
     <!-- ----- RODAPÉ ----- -->
