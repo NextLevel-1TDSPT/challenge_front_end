@@ -350,3 +350,24 @@ ol {
 .about-block p {
     margin-bottom: 16px;
 }
+
+
+/* ---------- 8. Integrantes ---------- */
+.member-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+dt {
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+dd {
+    color: #4A5A70;
+    margin-bottom: 16px;
+}
