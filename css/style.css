@@ -339,3 +339,14 @@ ol {
     color: #206DDD;
     white-space: nowrap;
 }
+
+
+/* ---------- 7. Sobre ---------- */
+.about-block {
+    align-items: center;
+    margin-bottom: 72px;
+}
+
+.about-block p {
+    margin-bottom: 16px;
+}
