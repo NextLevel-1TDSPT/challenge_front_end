@@ -24,364 +24,427 @@
    11. Media queries (desktop ≥992px e ≥1300px)
    ========================================================== */
 
+
 /* ---------- 1. Base ---------- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Gotham", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #1b2a41;
-  background-color: #ffffff;
+    font-family: "Gotham", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1B2A41;
+    background-color: #FFFFFF;
 }
 
 h1 {
-  font-size: 44px;
-  margin-bottom: 12px;
+    font-size: 44px;
+    margin-bottom: 12px;
 }
 
 h2 {
-  font-size: 30px;
-  color: #206ddd;
-  margin-bottom: 12px;
+    font-size: 30px;
+    color: #206DDD;
+    margin-bottom: 12px;
 }
 
 h3 {
-  font-size: 20px;
-  color: #206ddd;
-  margin-bottom: 8px;
+    font-size: 20px;
+    color: #206DDD;
+    margin-bottom: 8px;
 }
 
 p {
-  color: #4a5a70;
+    color: #4A5A70;
 }
 
 a {
-  color: #206ddd;
+    color: #206DDD;
 }
 
 ul,
 ol {
-  list-style: none;
+    list-style: none;
 }
 
 /* Texto de apoio abaixo dos títulos */
 .subtitle {
-  font-size: 18px;
-  margin-bottom: 40px;
+    font-size: 18px;
+    margin-bottom: 40px;
 }
 
 /* Texto pequeno (fontes, RM, observações) */
 .nota {
-  font-size: 14px;
-  margin-top: 8px;
+    font-size: 14px;
+    margin-top: 8px;
 }
+
 
 /* ---------- 2. Layout ---------- */
 .container {
-  width: 90%;
-  margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .section {
-  padding: 72px 0;
+    padding: 72px 0;
 }
 
 .section-alt {
-  background-color: #f2f8ff;
+    background-color: #F2F8FF;
 }
 
 /* Linha: coloca os itens lado a lado e quebra para baixo quando não cabem */
 .linha {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 
 /* Colunas: largura de cada item dentro da .linha */
 .col-2 {
-  width: 48%; /* 2 por linha */
+    width: 48%; /* 2 por linha */
 }
 
 .col-3 {
-  width: 31%; /* 3 por linha */
+    width: 31%; /* 3 por linha */
 }
 
 .col-4 {
-  width: 22%; /* 4 por linha */
+    width: 22%; /* 4 por linha */
 }
 
 /* Itens lado a lado (botões, etiquetas, foto + nome) */
 .flex {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
+
 
 /* ---------- 3. Componentes ---------- */
 
 /* Botões */
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 30px;
-  border: 2px solid #206ddd;
-  font-family: "Gotham", Arial, sans-serif;
-  font-size: 15px;
-  text-decoration: none;
-  cursor: pointer;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 2px solid #206DDD;
+    font-family: "Gotham", Arial, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-primary {
-  background-color: #206ddd;
-  color: #ffffff;
+    background-color: #206DDD;
+    color: #FFFFFF;
 }
 
 .btn-primary:hover {
-  background-color: #154ea3;
+    background-color: #154EA3;
 }
 
 .btn-secondary {
-  background-color: #ffffff;
-  color: #206ddd;
+    background-color: #FFFFFF;
+    color: #206DDD;
 }
 
 .btn-secondary:hover {
-  background-color: #cce5ff;
+    background-color: #CCE5FF;
 }
 
 /* Etiqueta pequena (categorias, sprints, tecnologias) */
 .tag {
-  display: inline-block;
-  padding: 4px 14px;
-  border-radius: 30px;
-  background-color: #cce5ff;
-  color: #154ea3;
-  font-size: 14px;
-  margin-bottom: 12px;
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 30px;
+    background-color: #CCE5FF;
+    color: #154EA3;
+    font-size: 14px;
+    margin-bottom: 12px;
 }
 
 /* Card: um único estilo para todos os blocos com borda */
 .card {
-  background-color: #ffffff;
-  border: 1px solid #cce5ff;
-  border-radius: 16px;
-  padding: 32px;
+    background-color: #FFFFFF;
+    border: 1px solid #CCE5FF;
+    border-radius: 16px;
+    padding: 32px;
 }
 
 /* Card com borda azul (sprint atual no roadmap) */
 .card-destaque {
-  border: 2px solid #206ddd;
+    border: 2px solid #206DDD;
 }
 
 /* Card com lista separada por linhas (página Sobre) */
 .card-lista h3 {
-  padding-bottom: 16px;
-  border-bottom: 2px solid #206ddd;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #206DDD;
 }
 
 .card-lista li {
-  padding: 14px 0;
-  border-bottom: 1px solid #cce5ff;
+    padding: 14px 0;
+    border-bottom: 1px solid #CCE5FF;
 }
 
 /* Número em destaque dentro dos cards */
 .numero {
-  display: block;
-  font-size: 40px;
-  font-weight: 700;
-  color: #206ddd;
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #206DDD;
 }
+
 
 /* ---------- 4. Header e menu ---------- */
 .site-header {
-  background-color: #206ddd;
+    background-color: #206DDD;
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
 }
 
 .logo img {
-  height: 60px;
+    height: 60px;
 }
 
 .nav-list {
-  display: flex;
-  gap: 28px;
+    display: flex;
+    gap: 28px;
 }
 
 .nav-list a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 6px 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 6px 0;
 }
 
 /* Link com o mouse em cima e link da página atual (.active) */
 .nav-list a:hover,
 .nav-list a.active {
-  border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #FFFFFF;
 }
+
 
 /* ---------- 5. Footer ---------- */
 .site-footer {
-  background-color: #206ddd;
-  color: #ffffff;
-  padding: 48px 0 24px;
+    background-color: #206DDD;
+    color: #FFFFFF;
+    padding: 48px 0 24px;
 }
 
 .site-footer p {
-  color: #ffffff;
-  font-size: 14px;
+    color: #FFFFFF;
+    font-size: 14px;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Texto de apresentação do rodapé */
 .footer-content p {
-  width: 360px;
+    width: 360px;
 }
 
 .footer-title {
-  font-weight: 700;
-  margin-bottom: 8px;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
 .footer-links {
-  display: flex;
-  gap: 24px;
+    display: flex;
+    gap: 24px;
 }
 
 .footer-links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .footer-bottom {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #cce5ff;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #CCE5FF;
 }
+
 
 /* ---------- 6. Página inicial ---------- */
 .hero {
-  background-color: #f2f8ff;
-  padding: 96px 0;
+    background-color: #F2F8FF;
+    padding: 96px 0;
 }
 
 .hero .linha {
-  align-items: center;
+    align-items: center;
 }
 
 .hero h1 {
-  font-size: 52px;
-  line-height: 1.2;
-  margin-bottom: 20px;
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .hero h1 span {
-  color: #206ddd;
+    color: #206DDD;
 }
 
 /* Bolinha azul com o número de cada passo */
 .passo {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #206ddd;
-  color: #ffffff;
-  font-weight: 700;
-  margin-bottom: 16px;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #206DDD;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 16px;
 }
 
 /* Faixa azul de chamada para doação */
 .cta-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  background-color: #206ddd;
-  border-radius: 16px;
-  padding: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: #206DDD;
+    border-radius: 16px;
+    padding: 56px;
 }
 
 .cta-box h2,
 .cta-box p {
-  color: #ffffff;
+    color: #FFFFFF;
 }
 
 .cta-box .btn-primary {
-  background-color: #ffffff;
-  color: #206ddd;
-  white-space: nowrap;
+    background-color: #FFFFFF;
+    color: #206DDD;
+    white-space: nowrap;
 }
+
 
 /* ---------- 7. Sobre ---------- */
 .about-block {
-  align-items: center;
-  margin-bottom: 72px;
+    align-items: center;
+    margin-bottom: 72px;
 }
 
 .about-block p {
-  margin-bottom: 16px;
+    margin-bottom: 16px;
 }
+
 
 /* ---------- 8. Integrantes ---------- */
 .member-photo {
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 dt {
-  font-weight: 700;
-  font-size: 14px;
-  margin-top: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 16px;
 }
 
 dd {
-  color: #4a5a70;
-  margin-bottom: 16px;
+    color: #4A5A70;
+    margin-bottom: 16px;
 }
+
 
 /* ---------- 9. FAQ ---------- */
 .faq-list {
-  width: 860px;
-  margin: 0 auto;
+    width: 860px;
+    margin: 0 auto;
 }
 
 .faq-item {
-  border: 1px solid #cce5ff;
-  border-radius: 8px;
-  margin-bottom: 12px;
+    border: 1px solid #CCE5FF;
+    border-radius: 8px;
+    margin-bottom: 12px;
 }
 
 .faq-item summary {
-  cursor: pointer;
-  padding: 20px 24px;
-  font-weight: 500;
+    cursor: pointer;
+    padding: 20px 24px;
+    font-weight: 500;
 }
 
 .faq-item p {
-  padding: 0 24px 20px;
+    padding: 0 24px 20px;
+}
+
+
+/* ---------- 10. Formulário (Contato) ---------- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: "Gotham", Arial, sans-serif;
+    font-size: 15px;
+    padding: 10px 10px;
+    border: 1px solid #CCE5FF;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+.form-group textarea {
+    height: 140px;
+}
+
+/* Cards empilhados na coluna lateral */
+aside .card {
+    margin-bottom: 24px;
+}
+
+
+/* ---------- 11. Media queries (somente desktop nesta sprint) ---------- */
+
+/* Laptops e desktops (≥992px) */
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/* Telas grandes (≥1300px): mais largura e respiro */
+@media (min-width: 1300px) {
+    .container {
+        width: 1240px;
+    }
+
+    .section {
+        padding: 96px 0;
+    }
 }
