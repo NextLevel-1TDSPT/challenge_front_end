@@ -29,7 +29,15 @@
         <nav aria-label="Menu principal">
           <ul class="nav-list">
             <li><a href="../index.html">Início</a></li>
-            <li><a href="sobre.html" class="active">Sobre o projeto</a></li>
+            <li class="submenu">
+              <a href="sobre.html" class="active">Sobre o projeto &#9662;</a>
+              <!-- Submenu: aparece ao passar o mouse -->
+              <ul class="submenu-lista">
+                <li><a href="problema-solucao.html">Problema e solução</a></li>
+                <li><a href="como-doar.html">Como doar</a></li>
+                <li><a href="assistente.html">Assistente</a></li>
+              </ul>
+            </li>
             <li><a href="integrantes.html">Equipe</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contato.html">Contato</a></li>
@@ -138,6 +146,14 @@
                 pela Nota Fiscal Paulista e faz o cadastro de doadores da Turma
                 do Bem.
               </p>
+              <div class="flex">
+                <a href="problema-solucao.html" class="btn btn-primary"
+                  >Ver a solução</a
+                >
+                <a href="assistente.html" class="btn btn-secondary"
+                  >Ver o assistente</a
+                >
+              </div>
             </div>
             <div class="card card-lista col-2">
               <h3>O que muda</h3>
@@ -228,15 +244,26 @@
             </p>
           </div>
 
-          <nav aria-label="Links do rodapé">
-            <p class="footer-title">Navegação</p>
-            <ul class="footer-links">
-              <li><a href="../index.html">Início</a></li>
-              <li><a href="sobre.html">Sobre o projeto</a></li>
-              <li><a href="integrantes.html">Equipe</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contato.html">Contato</a></li>
-            </ul>
+          <nav aria-label="Links do rodapé" class="footer-nav">
+            <div>
+              <p class="footer-title">Navegação</p>
+              <ul class="footer-links">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre o projeto</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="footer-title">Nossa solução</p>
+              <ul class="footer-links">
+                <li><a href="problema-solucao.html">Problema e solução</a></li>
+                <li><a href="como-doar.html">Como doar</a></li>
+                <li><a href="assistente.html">Assistente</a></li>
+              </ul>
+            </div>
           </nav>
         </div>
 
