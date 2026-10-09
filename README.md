@@ -64,7 +64,10 @@ challenge_front_end/
     ├── sobre.html          # Contexto, problema, solução, tecnologias e roadmap
     ├── integrantes.html    # Equipe
     ├── faq.html            # Perguntas frequentes
-    └── contato.html        # Formulário de contato
+    ├── contato.html        # Formulário de contato
+    ├── problema-solucao.html  # Solução: o problema e a jornada do doador
+    ├── como-doar.html      # Solução: protótipo do caminho para doar
+    └── assistente.html     # Solução: simulação do chatbot
 ```
 
 ---
@@ -78,6 +81,16 @@ challenge_front_end/
 | **Equipe** | Nome, foto, RM, turma, LinkedIn e GitHub de cada integrante |
 | **FAQ** | Perguntas frequentes sobre a ONG, as doações e o projeto |
 | **Contato** | Formulário com nome, telefone, e-mail, assunto e mensagem |
+
+### Páginas da solução
+
+Ficam no submenu **Sobre o projeto ▾** e na coluna **Nossa solução** do rodapé.
+
+| Página | Conteúdo |
+|---|---|
+| **Problema e solução** | O problema do site atual e a jornada do doador: hoje × com o NextLevel |
+| **Como doar** | Protótipo do novo site: doação comum e doação pela Nota Fiscal Paulista |
+| **Assistente** | Simulação estática da conversa com o chatbot, do primeiro "oi" ao cadastro de doador |
 
 ### Prints
 
@@ -95,6 +108,15 @@ challenge_front_end/
 
 **Contato**
 ![Página Contato](imagens/prints/contato.png)
+
+**Problema e solução**
+![Página Problema e solução](imagens/prints/problema-solucao.png)
+
+**Como doar**
+![Página Como doar](imagens/prints/como-doar.png)
+
+**Assistente**
+![Página Assistente](imagens/prints/assistente.png)
 
 ---
 
