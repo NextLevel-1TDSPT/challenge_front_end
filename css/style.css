@@ -21,7 +21,8 @@
    8. Integrantes
    9. FAQ
    10. Formulário (Contato)
-   11. Media queries (desktop ≥992px e ≥1300px)
+   11. Páginas da solução (Problema e solução, Como doar e Assistente)
+   12. Media queries (desktop ≥992px e ≥1300px)
    ========================================================== */
 
 
@@ -429,7 +430,41 @@ aside .card {
 }
 
 
-/* ---------- 11. Media queries (somente desktop nesta sprint) ---------- */
+/* ---------- 11. Páginas da solução (Problema e solução, Como doar e Assistente) ---------- */
+
+/* Botão dentro dos cards de doação */
+.botao-card {
+    margin-top: 20px;
+}
+
+/* Lista simples dentro dos cards */
+.lista-simples li {
+    padding: 6px 0;
+    color: #4A5A70;
+}
+
+/* Jornada do doador (página Problema e solução) */
+.jornada li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #CCE5FF;
+    color: #4A5A70;
+}
+
+.jornada .passo {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+/* Passo cinza: o caminho do site atual */
+.passo-cinza {
+    background-color: #4A5A70;
+}
+
+
+/* ---------- 12. Media queries (somente desktop nesta sprint) ---------- */
 
 /* Laptops e desktops (≥992px) */
 @media (min-width: 992px) {
