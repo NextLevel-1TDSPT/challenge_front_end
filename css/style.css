@@ -463,6 +463,111 @@ aside .card {
     background-color: #4A5A70;
 }
 
+/* Janela do chat: o card sem espaçamento interno */
+.chat {
+    padding: 0;
+}
+
+/* Topo do chat: ícone + nome do assistente */
+.chat-topo {
+    padding: 20px 24px;
+    border-bottom: 1px solid #CCE5FF;
+}
+
+/* Ícone do assistente: círculo azul com as iniciais NL */
+.chat-avatar {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #206DDD;
+    color: #FFFFFF;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.chat-nome {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.chat-topo .nota {
+    margin-top: 0;
+}
+
+/* Área das mensagens: uma embaixo da outra, cada uma do tamanho do texto */
+.chat-mensagens {
+    display: flex;
+    flex-direction: column; /* empilha as mensagens */
+    align-items: flex-start; /* cada balão fica do tamanho do seu texto */
+    gap: 8px;
+    padding: 20px;
+    background-color: #F2F8FF;
+}
+
+/* Balão de mensagem */
+.msg {
+    padding: 8px 14px;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Mensagens do assistente: sobra sempre um espaço à direita */
+.msg-bot {
+    margin-right: 15%;
+}
+
+/* Mensagem do assistente */
+.msg-bot {
+    background-color: #FFFFFF;
+    border: 1px solid #CCE5FF;
+    color: #1B2A41;
+}
+
+/* Mensagem do usuário */
+.msg-usuario {
+    background-color: #206DDD;
+    color: #FFFFFF;
+    margin-left: auto;
+}
+
+/* Resumo dos dados dentro da mensagem */
+.msg-dados {
+    margin-top: 8px;
+}
+
+/* Botões de resposta rápida */
+.chat-opcoes {
+    gap: 8px;
+}
+
+.opcao {
+    padding: 4px 12px;
+    border: 1px solid #206DDD;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    color: #206DDD;
+    font-size: 14px;
+}
+
+/* Campo de mensagem (apenas visual nesta sprint) */
+.chat-campo {
+    padding: 16px 24px;
+    border-top: 1px solid #CCE5FF;
+}
+
+.chat-campo input {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #CCE5FF;
+    border-radius: 30px;
+    font-family: "Gotham", Arial, sans-serif;
+    font-size: 15px;
+}
+
 
 /* ---------- 12. Media queries (somente desktop nesta sprint) ---------- */
 
