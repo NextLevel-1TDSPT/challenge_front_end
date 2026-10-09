@@ -71,7 +71,7 @@ ol {
     list-style: none;
 }
 
-/* Texto de apoio abaixo dos títulos */
+/* Texto de apoio (texto embaixo dos títulos) */
 .subtitle {
     font-size: 18px;
     margin-bottom: 40px;
@@ -107,18 +107,18 @@ ol {
 
 /* Colunas: largura de cada item dentro da .linha */
 .col-2 {
-    width: 48%; /* 2 por linha */
+    width: 48%; 
 }
 
 .col-3 {
-    width: 31%; /* 3 por linha */
+    width: 31%; 
 }
 
 .col-4 {
-    width: 22%; /* 4 por linha */
+    width: 22%;
 }
 
-/* Itens lado a lado (botões, etiquetas, foto + nome) */
+/* Itens lado a lado  */
 .flex {
     display: flex;
     align-items: center;
@@ -128,7 +128,7 @@ ol {
 
 /* ---------- 3. Componentes ---------- */
 
-/* Botões */
+
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -158,7 +158,7 @@ ol {
     background-color: #CCE5FF;
 }
 
-/* Etiqueta pequena (categorias, sprints, tecnologias) */
+/* Etiqueta pequena */
 .tag {
     display: inline-block;
     padding: 4px 14px;
@@ -169,7 +169,7 @@ ol {
     margin-bottom: 12px;
 }
 
-/* Card: um único estilo para todos os blocos com borda */
+/* Card.*/
 .card {
     background-color: #FFFFFF;
     border: 1px solid #CCE5FF;
@@ -177,12 +177,12 @@ ol {
     padding: 32px;
 }
 
-/* Card com borda azul (sprint atual no roadmap) */
+/* Card */
 .card-destaque {
     border: 2px solid #206DDD;
 }
 
-/* Card com lista separada por linhas (página Sobre) */
+/* Card*/
 .card-lista h3 {
     padding-bottom: 16px;
     border-bottom: 2px solid #206DDD;
@@ -202,7 +202,7 @@ ol {
 }
 
 
-/* ---------- 4. Header e menu ---------- */
+/* -- 4. Header e menu ----- */
 .site-header {
     background-color: #206DDD;
 }
@@ -235,6 +235,39 @@ ol {
     border-bottom: 2px solid #FFFFFF;
 }
 
+/* Submenu de "Sobre o projeto" */
+.submenu {
+    position: relative; /* o submenu se posiciona a partir deste item */
+}
+
+.submenu-lista {
+    display: none; /* esconde até o mouse ficar em cima */
+    position: absolute; /* flutua sobre a página sem empurrar o conteúdo */
+    top: 100%; /* logo abaixo de "Sobre o projeto" */
+    left: 0;
+    width: 200px;
+    padding: 8px 0;
+    background-color: #FFFFFF;
+    border: 1px solid #CCE5FF;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(27, 42, 65, 0.15);
+}
+
+.submenu:hover .submenu-lista {
+    display: block;
+}
+
+.submenu-lista a {
+    display: block;
+    padding: 8px 16px;
+    color: #206DDD;
+}
+
+.submenu-lista a:hover {
+    border-bottom: none;
+    background-color: #F2F8FF;
+}
+
 
 /* ---------- 5. Footer ---------- */
 .site-footer {
@@ -263,9 +296,20 @@ ol {
     margin-bottom: 8px;
 }
 
-.footer-links {
+/* Duas colunas de links: Navegação e Nossa solução */
+.footer-nav {
     display: flex;
-    gap: 24px;
+    gap: 64px;
+}
+
+/* Títulos das colunas*/
+.footer-nav p {
+    width: auto;
+}
+
+/* Links um embaixo do outro */
+.footer-links li {
+    margin-bottom: 8px;
 }
 
 .footer-links a {
@@ -305,7 +349,7 @@ ol {
     color: #206DDD;
 }
 
-/* Bolinha azul com o número de cada passo */
+/* Bolinha azul  */
 .passo {
     display: inline-block;
     width: 36px;
@@ -569,16 +613,16 @@ aside .card {
 }
 
 
-/* ---------- 12. Media queries (somente desktop nesta sprint) ---------- */
+/* ---------- 12. Media queries ---------- */
 
-/* Laptops e desktops (≥992px) */
+/* desktops (≥992px) */
 @media (min-width: 992px) {
     .container {
         width: 960px;
     }
 }
 
-/* Telas grandes (≥1300px): mais largura e respiro */
+/* Telas grandes (≥1300px */
 @media (min-width: 1300px) {
     .container {
         width: 1240px;
