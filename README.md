@@ -138,3 +138,4 @@ Dúvidas ou sugestões sobre o projeto? Fale com a equipe:
 
 - Pelos **LinkedIns** dos integrantes, na tabela acima;
 - Abrindo uma [issue no repositório](https://github.com/NextLevel-1TDSPT/challenge_front_end/issues).
+- 
