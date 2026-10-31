@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/style.css" />
 
     <title>Contato | NextLevel</title>
+    <script src="../js/menu.js" defer></script>
   </head>
 
   <body>
@@ -22,15 +23,34 @@
       <div class="container header-content">
         <a href="../index.html" class="logo">
           <img
-            src="../images/Logo NextLevel.png"
+            src="../imagens/logo_nextlevel.png"
             alt="NextLevel - página inicial"
           />
         </a>
 
-        <nav aria-label="Menu principal">
+        <!-- Botão do menu hambúrguer: aparece só em telas menores (JS em js/menu.js) -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+        >
+          <span class="menu-toggle-barra"></span>
+          <span class="menu-toggle-barra"></span>
+          <span class="menu-toggle-barra"></span>
+        </button>
+
+        <nav class="menu-principal" aria-label="Menu principal">
           <ul class="nav-list">
             <li><a href="../index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li class="submenu">
+              <a href="sobre.html">Sobre o projeto &#9662;</a>
+              <!-- Submenu: aparece ao passar o mouse -->
+              <ul class="submenu-lista">
+                <li><a href="problema-solucao.html">Problema e solução</a></li>
+                <li><a href="como-doar.html">Como doar</a></li>
+                <li><a href="assistente.html">Assistente</a></li>
+              </ul>
+            </li>
             <li><a href="integrantes.html">Equipe</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contato.html" class="active">Contato</a></li>
@@ -41,7 +61,109 @@
 
     <!-- ----- CONTEÚDO PRINCIPAL ----- -->
     <main>
-      <!-- conteúdo da página -->
+      <!-- Título da página -->
+
+      <section class="section section-alt">
+        <div class="container">
+          <h1>Contato</h1>
+          <p>
+            Tem uma dúvida, sugestão ou quer ajudar de outro jeito? Fale com a
+            gente.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container linha">
+          <!-- Formulário -->
+
+          <form class="card col-2" action="#" method="post">
+            <h2>Fale com a gente</h2>
+
+            <div class="form-group">
+              <label for="nome">Seu nome</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Ex.: Maria da Silva"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(11) 90000-0000"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Seu e-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="voce@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto" required>
+                <option value="">Selecione um assunto</option>
+                <option value="doacao">Doação</option>
+                <option value="nota-fiscal">Nota Fiscal Paulista</option>
+                <option value="voluntario">Quero ser voluntário</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Digite a sua mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Escreva aqui como podemos ajudar"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Enviar mensagem
+            </button>
+          </form>
+
+          <!-- Informações extras -->
+
+          <aside class="col-2">
+            <div class="card">
+              <h3>Sua dúvida não está no FAQ? Nos contate.</h3>
+              <p>
+                Deixe seu e-mail ou telefone para retornarmos o contato
+                (formulário ainda em desenvolvimento).
+              </p>
+            </div>
+            <div class="card">
+              <h3>Dúvidas rápidas?</h3>
+              <p>
+                Veja as <a href="faq.html">perguntas frequentes</a> antes de
+                escrever.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Quer conhecer o projeto?</h3>
+              <p>
+                Veja na página <a href="sobre.html">Sobre o projeto</a> o
+                problema e a nossa solução.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
     </main>
 
     <!-- ----- RODAPÉ ----- -->
@@ -61,15 +183,26 @@
             </p>
           </div>
 
-          <nav aria-label="Links do rodapé">
-            <p class="footer-title">Navegação</p>
-            <ul class="footer-links">
-              <li><a href="../index.html">Início</a></li>
-              <li><a href="sobre.html">Sobre o projeto</a></li>
-              <li><a href="integrantes.html">Equipe</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contato.html">Contato</a></li>
-            </ul>
+          <nav aria-label="Links do rodapé" class="footer-nav">
+            <div>
+              <p class="footer-title">Navegação</p>
+              <ul class="footer-links">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre o projeto</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="footer-title">Nossa solução</p>
+              <ul class="footer-links">
+                <li><a href="problema-solucao.html">Problema e solução</a></li>
+                <li><a href="como-doar.html">Como doar</a></li>
+                <li><a href="assistente.html">Assistente</a></li>
+              </ul>
+            </div>
           </nav>
         </div>
 
