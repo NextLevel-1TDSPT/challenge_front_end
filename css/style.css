@@ -496,19 +496,17 @@ dd {
     height: 8.75rem;
 }
 
-/* Validação: campo com erro fica com borda vermelha */
+/* Validação do formulário */
 .form-group .campo-erro {
     border-color: #D93025;
 }
 
-/* Texto de erro embaixo do campo */
 .mensagem-erro {
     color: #D93025;
     font-size: 0.85rem;
     margin-top: 0.25rem;
 }
 
-/* Texto verde que aparece quando o envio dá certo */
 .mensagem-sucesso {
     color: #1E8E3E;
     font-weight: 700;
