@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Protótipo do assistente NextLevel: explica a Nota Fiscal Paulista e faz o cadastro de doadores da Turma do Bem."
+    />
+
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>Assistente | NextLevel</title>
+  </head>
+
+  <body>
+    <!-- ----- CABEÇALHO ----- -->
+
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="../index.html" class="logo">
+          <img
+            src="../imagens/logo_nextlevel.png"
+            alt="NextLevel - página inicial"
+          />
+        </a>
+
+        <nav aria-label="Menu principal">
+          <ul class="nav-list">
+            <li><a href="../index.html">Início</a></li>
+            <li class="submenu">
+              <a href="sobre.html" class="active">Sobre o projeto &#9662;</a>
+              <!-- Submenu -->
+              <ul class="submenu-lista">
+                <li><a href="problema-solucao.html">Problema e solução</a></li>
+                <li><a href="como-doar.html">Como doar</a></li>
+                <li><a href="assistente.html">Assistente</a></li>
+              </ul>
+            </li>
+            <li><a href="integrantes.html">Equipe</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ------ CONTEÚDO PRINCIPAL ------ -->
+    <main>
+      <!-- Título da página -->
+
+      <section class="section section-alt">
+        <div class="container">
+          <span class="tag">Protótipo da solução</span>
+          <h1>Assistente NextLevel</h1>
+          <p>
+            Um assistente virtual que explica as formas de doar, apresenta a
+            Nota Fiscal Paulista e faz o seu cadastro de doador.
+          </p>
+        </div>
+      </section>
+
+      <!-- Simulação da conversa -->
+
+      <section class="section">
+        <div class="container linha">
+          <!-- Janela do chat  -->
+
+          <article class="card chat col-2" aria-label="Simulação de conversa">
+            <div class="chat-topo flex">
+              <span class="chat-avatar" aria-hidden="true">NL</span>
+              <div>
+                <h2 class="chat-nome">Assistente NextLevel</h2>
+                <p class="nota">Online agora</p>
+              </div>
+            </div>
+
+            <ol class="chat-mensagens">
+              <li class="msg msg-bot">
+                Olá! Eu sou o assistente da Turma do Bem. Como você quer ajudar
+                hoje?
+              </li>
+              <li class="chat-opcoes flex">
+                <span class="opcao">Doação comum</span>
+                <span class="opcao">Nota Fiscal Paulista</span>
+              </li>
+              <li class="msg msg-usuario">Quero doar minha nota fiscal</li>
+              <li class="msg msg-bot">
+                Com a Nota Fiscal Paulista, parte do imposto das suas compras vai
+                para a Turma do Bem, sem custo para você. Para ativar, é só
+                entrar no site da Nota Fiscal Paulista e escolher a Turma do Bem
+                como entidade.
+              </li>
+              <li class="msg msg-bot">
+                Enquanto isso, vou fazer o seu cadastro de doador. Digite o seu
+                CPF:
+              </li>
+              <li class="msg msg-usuario">123.456.789-00</li>
+              <li class="msg msg-bot">Agora, digite o seu telefone:</li>
+              <li class="msg msg-usuario">(11) 90000-0000</li>
+              <li class="msg msg-bot">Qual é o seu e-mail?</li>
+              <li class="msg msg-usuario">joao@email.com</li>
+              <li class="msg msg-bot">Como você gostaria de ser chamado?</li>
+              <li class="msg msg-usuario">João Neto</li>
+              <li class="msg msg-bot">
+                Confira se os seus dados estão corretos:
+                <ul class="msg-dados">
+                  <li><strong>Nome:</strong> João Neto</li>
+                  <li><strong>CPF:</strong> 123.456.789-00</li>
+                  <li><strong>Telefone:</strong> (11) 90000-0000</li>
+                  <li><strong>E-mail:</strong> joao@email.com</li>
+                </ul>
+              </li>
+              <li class="chat-opcoes flex">
+                <span class="opcao">Sim, está certo</span>
+                <span class="opcao">Corrigir dados</span>
+              </li>
+              <li class="msg msg-usuario">Sim, está certo</li>
+              <li class="msg msg-bot">
+                Seu cadastro de doador foi gerado com sucesso! A Turma do Bem
+                agradece a colaboração. Gostaria de doar uma quantia também?
+              </li>
+              <li class="msg msg-usuario">Finalizar conversa</li>
+              <li class="msg msg-bot">
+                Muito obrigado por usar o assistente da Turma do Bem. Esperamos
+                contar com o seu apoio sempre!
+              </li>
+            </ol>
+
+            <!-- Campo de mensagem (apenas visual nesta sprint) -->
+            <div class="chat-campo flex">
+              <input
+                type="text"
+                placeholder="Digite sua mensagem"
+                aria-label="Digite sua mensagem"
+              />
+              <button type="button" class="btn btn-primary">Enviar</button>
+            </div>
+          </article>
+
+          <!-- Explicação do assistente -->
+
+          <aside class="col-2">
+            <div class="card">
+              <h3>O que o assistente faz</h3>
+              <ul class="lista-simples">
+                <li>Explica as formas de doar para a Turma do Bem.</li>
+                <li>Envia o link do portal para a doação comum.</li>
+                <li>
+                  Explica a Nota Fiscal Paulista e faz o seu cadastro de doador.
+                </li>
+                <li>Confere os dados e permite corrigir antes de enviar.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Como ele entende o que você escreve</h3>
+              <p>
+                O assistente reconhece intenções, como querer doar, cadastrar a
+                nota, cancelar ou finalizar a conversa. Ele também identifica
+                dados como CPF, telefone e e-mail no meio da frase.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Próximos passos</h3>
+              <p>
+                Nesta sprint, a conversa é um protótipo estático. O assistente
+                funcional entra no site na Sprint 3, como mostra o
+                <a href="sobre.html">roadmap do projeto</a>.
+              </p>
+              <p class="nota">Os dados desta conversa são fictícios.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- ----- RODAPÉ ----- -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <p class="footer-title">NextLevel</p>
+            <p>
+              Proposta de novo site para a Turma do Bem, criada no Challenge
+              FIAP.<br />
+              <strong
+                >Projeto acadêmico: não é o site oficial da Turma do
+                Bem.</strong
+              >
+            </p>
+          </div>
+
+          <nav aria-label="Links do rodapé" class="footer-nav">
+            <div>
+              <p class="footer-title">Navegação</p>
+              <ul class="footer-links">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre o projeto</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="footer-title">Nossa solução</p>
+              <ul class="footer-links">
+                <li><a href="problema-solucao.html">Problema e solução</a></li>
+                <li><a href="como-doar.html">Como doar</a></li>
+                <li><a href="assistente.html">Assistente</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <p class="footer-bottom">
+          &copy; 2026 NextLevel &ndash; Challenge FIAP &times; Turma do Bem
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
