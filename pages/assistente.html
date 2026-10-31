@@ -94,61 +94,10 @@
                 hoje?
               </li>
               <li class="chat-opcoes flex">
-                <span class="opcao">Doação comum</span>
-                <span class="opcao">Nota Fiscal Paulista</span>
-              </li>
-              <li class="msg msg-usuario">Quero doar minha nota fiscal</li>
-              <li class="msg msg-bot">
-                Com a Nota Fiscal Paulista, parte do imposto das suas compras vai
-                para a Turma do Bem, sem custo para você. Para ativar, é só
-                entrar no site da Nota Fiscal Paulista e escolher a Turma do Bem
-                como entidade.
-              </li>
-              <li class="msg msg-bot">
-                Enquanto isso, vou fazer o seu cadastro de doador. Digite o seu
-                CPF:
-              </li>
-              <li class="msg msg-usuario">123.456.789-00</li>
-              <li class="msg msg-bot">Agora, digite o seu telefone:</li>
-              <li class="msg msg-usuario">(11) 90000-0000</li>
-              <li class="msg msg-bot">Qual é o seu e-mail?</li>
-              <li class="msg msg-usuario">joao@email.com</li>
-              <li class="msg msg-bot">Como você gostaria de ser chamado?</li>
-              <li class="msg msg-usuario">João Neto</li>
-              <li class="msg msg-bot">
-                Confira se os seus dados estão corretos:
-                <ul class="msg-dados">
-                  <li><strong>Nome:</strong> João Neto</li>
-                  <li><strong>CPF:</strong> 123.456.789-00</li>
-                  <li><strong>Telefone:</strong> (11) 90000-0000</li>
-                  <li><strong>E-mail:</strong> joao@email.com</li>
-                </ul>
-              </li>
-              <li class="chat-opcoes flex">
-                <span class="opcao">Sim, está certo</span>
-                <span class="opcao">Corrigir dados</span>
-              </li>
-              <li class="msg msg-usuario">Sim, está certo</li>
-              <li class="msg msg-bot">
-                Seu cadastro de doador foi gerado com sucesso! A Turma do Bem
-                agradece a colaboração. Gostaria de doar uma quantia também?
-              </li>
-              <li class="msg msg-usuario">Finalizar conversa</li>
-              <li class="msg msg-bot">
-                Muito obrigado por usar o assistente da Turma do Bem. Esperamos
-                contar com o seu apoio sempre!
+                <button type="button" class="opcao" data-passo="doacao-comum">Doação comum</button>
+                <button type="button" class="opcao" data-passo="nota-fiscal">Nota Fiscal Paulista</button>
               </li>
             </ol>
-
-            <!-- Campo de mensagem (apenas visual nesta sprint) -->
-            <div class="chat-campo flex">
-              <input
-                type="text"
-                placeholder="Digite sua mensagem"
-                aria-label="Digite sua mensagem"
-              />
-              <button type="button" class="btn btn-primary">Enviar</button>
-            </div>
           </article>
 
           <!-- Explicação do assistente -->
