@@ -429,16 +429,78 @@ aside .card {
 }
 
 
-/* ---------- 11. Media queries (somente desktop nesta sprint) ---------- */
+/* ---------- 12. Media queries ---------- */
 
-/* Laptops e desktops (≥992px) */
+/* Menu hambúrguer em mobile e tablet (até 991px) */
+@media (max-width: 991px) {
+    .header-content {
+        flex-wrap: wrap; /* permite o menu descer para a linha de baixo */
+        height: auto;
+        min-height: 80px;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Menu fechado por padrão; ocupa a largura toda quando aberto */
+    .menu-principal {
+        display: none;
+        width: 100%;
+        padding-bottom: 16px;
+    }
+
+    .menu-principal.menu-aberto {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-list a:hover,
+    .nav-list a.active {
+        border-bottom: 1px solid #FFFFFF;
+        font-weight: 700;
+    }
+
+    /* No toque não existe hover: o submenu aparece sempre, recuado */
+    .submenu-lista {
+        display: block;
+        position: static;
+        width: auto;
+        padding: 0 0 0 16px;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .submenu-lista a {
+        color: #FFFFFF;
+        padding: 10px 0;
+    }
+
+    .submenu-lista a:hover {
+        background-color: transparent;
+    }
+}
+
+/* desktops (≥992px) */
 @media (min-width: 992px) {
     .container {
         width: 960px;
     }
 }
 
-/* Telas grandes (≥1300px): mais largura e respiro */
+/* Telas grandes (≥1300px */
 @media (min-width: 1300px) {
     .container {
         width: 1240px;
