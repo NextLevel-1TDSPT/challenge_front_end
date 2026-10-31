@@ -9,6 +9,8 @@
    #F2F8FF  azul bem claro (fundo de algumas seções)
    #1B2A41  texto principal
    #4A5A70  texto secundário
+   #D93025  vermelho (erros do formulário)
+   #1E8E3E  verde (mensagem de sucesso)
 
    Sumário:
    1. Base (reset, textos e títulos)
@@ -492,6 +494,25 @@ dd {
 
 .form-group textarea {
     height: 8.75rem;
+}
+
+/* Validação: campo com erro fica com borda vermelha */
+.form-group .campo-erro {
+    border-color: #D93025;
+}
+
+/* Texto de erro embaixo do campo */
+.mensagem-erro {
+    color: #D93025;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* Texto verde que aparece quando o envio dá certo */
+.mensagem-sucesso {
+    color: #1E8E3E;
+    font-weight: 700;
+    margin-top: 1rem;
 }
 
 /* Cards empilhados na coluna lateral */
