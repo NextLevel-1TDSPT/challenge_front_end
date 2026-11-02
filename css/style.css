@@ -1,37 +1,25 @@
-/* ==========================================================
-   NextLevel – Challenge Turma do Bem (FIAP – Sprint 02)
-   Folha de estilo principal (responsiva: desktop, tablet e celular)
+/* Variáveis */
+:root {
+    --cor-principal: #206DDD;
+    --cor-principal-escura: #154EA3;
+    --cor-clara: #CCE5FF;
+    --cor-fundo-claro: #F2F8FF;
+    --cor-branca: #FFFFFF;
+    --cor-texto: #1B2A41;
+    --cor-texto-secundario: #4A5A70;
+    --cor-erro: #D93025;
+    --cor-sucesso: #1E8E3E;
 
-   Cores usadas (paleta do Figma):
-   #206DDD  azul principal (header, rodapé, títulos, botões)
-   #154EA3  azul escuro (botão com o mouse em cima)
-   #CCE5FF  azul claro (bordas, etiquetas)
-   #F2F8FF  azul bem claro (fundo de algumas seções)
-   #1B2A41  texto principal
-   #4A5A70  texto secundário
-   #D93025  vermelho (erros do formulário)
-   #1E8E3E  verde (mensagem de sucesso)
+    --fonte: "Gotham", Arial, sans-serif;
 
-   Sumário:
-   1. Base (reset, textos e títulos)
-   2. Layout (container, seções, linhas e colunas)
-   3. Componentes (botões, etiquetas, cards)
-   4. Header e menu
-   5. Footer
-   6. Página inicial
-   7. Sobre
-   8. Integrantes
-   9. FAQ
-   10. Formulário (Contato)
-   11. Páginas da solução (Problema e solução, Como doar e Assistente)
-   12. Media queries (tablet ≤991px, celular ≤767px e ≤480px, desktop ≥992px e ≥1300px)
-   ========================================================== */
+    --raio-pequeno: 0.5rem;
+    --raio-medio: 1rem;
+    --raio-grande: 1.875rem;
 
+    --sombra: 0 0.25rem 0.75rem rgba(27, 42, 65, 0.15);
+}
 
-/* ---------- 1. Base ---------- */
-
-/* Tamanho base: 100% = 16px. Todo o site usa rem, então mudar este valor
-   nas media queries ajusta fontes e espaçamentos de uma vez só */
+/* Base */
 html {
     font-size: 100%;
 }
@@ -43,11 +31,11 @@ html {
 }
 
 body {
-    font-family: "Gotham", Arial, sans-serif;
+    font-family: var(--fonte);
     font-size: 1rem;
     line-height: 1.6;
-    color: #1B2A41;
-    background-color: #FFFFFF;
+    color: var(--cor-texto);
+    background-color: var(--cor-branca);
 }
 
 h1 {
@@ -57,22 +45,22 @@ h1 {
 
 h2 {
     font-size: 1.875rem;
-    color: #206DDD;
+    color: var(--cor-principal);
     margin-bottom: 0.75rem;
 }
 
 h3 {
     font-size: 1.25rem;
-    color: #206DDD;
+    color: var(--cor-principal);
     margin-bottom: 0.5rem;
 }
 
 p {
-    color: #4A5A70;
+    color: var(--cor-texto-secundario);
 }
 
 a {
-    color: #206DDD;
+    color: var(--cor-principal);
 }
 
 ul,
@@ -80,20 +68,17 @@ ol {
     list-style: none;
 }
 
-/* Texto de apoio (texto embaixo dos títulos) */
 .subtitle {
     font-size: 1.125rem;
     margin-bottom: 2.5rem;
 }
 
-/* Texto pequeno (fontes, RM, observações) */
 .nota {
     font-size: 0.875rem;
     margin-top: 0.5rem;
 }
 
-
-/* ---------- 2. Layout ---------- */
+/* Layout */
 .container {
     width: 90%;
     margin: 0 auto;
@@ -104,116 +89,104 @@ ol {
 }
 
 .section-alt {
-    background-color: #F2F8FF;
+    background-color: var(--cor-fundo-claro);
 }
 
-/* Linha: coloca os itens lado a lado e quebra para baixo quando não cabem */
 .linha {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
-/* Colunas: largura de cada item dentro da .linha */
 .col-2 {
-    width: 48%; 
+    width: 48%;
 }
 
 .col-3 {
-    width: 31%; 
+    width: 31%;
 }
 
 .col-4 {
     width: 22%;
 }
 
-/* Itens lado a lado  */
 .flex {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-
-/* ---------- 3. Componentes ---------- */
-
-
+/* Componentes */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    border-radius: 30px;
-    border: 2px solid #206DDD;
-    font-family: "Gotham", Arial, sans-serif;
+    border-radius: var(--raio-grande);
+    border: 0.125rem solid var(--cor-principal);
+    font-family: var(--fonte);
     font-size: 0.9375rem;
     text-decoration: none;
     cursor: pointer;
 }
 
 .btn-primary {
-    background-color: #206DDD;
-    color: #FFFFFF;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
 }
 
 .btn-primary:hover {
-    background-color: #154EA3;
+    background-color: var(--cor-principal-escura);
 }
 
 .btn-secondary {
-    background-color: #FFFFFF;
-    color: #206DDD;
+    background-color: var(--cor-branca);
+    color: var(--cor-principal);
 }
 
 .btn-secondary:hover {
-    background-color: #CCE5FF;
+    background-color: var(--cor-clara);
 }
 
-/* Etiqueta pequena */
 .tag {
     display: inline-block;
     padding: 0.25rem 0.875rem;
-    border-radius: 30px;
-    background-color: #CCE5FF;
-    color: #154EA3;
+    border-radius: var(--raio-grande);
+    background-color: var(--cor-clara);
+    color: var(--cor-principal-escura);
     font-size: 0.875rem;
     margin-bottom: 0.75rem;
 }
 
-/* Card.*/
 .card {
-    background-color: #FFFFFF;
-    border: 1px solid #CCE5FF;
-    border-radius: 16px;
+    background-color: var(--cor-branca);
+    border: 0.0625rem solid var(--cor-clara);
+    border-radius: var(--raio-medio);
     padding: 2rem;
 }
 
-/* Card */
 .card-destaque {
-    border: 2px solid #206DDD;
+    border: 0.125rem solid var(--cor-principal);
 }
 
-/* Card*/
 .card-lista h3 {
     padding-bottom: 1rem;
-    border-bottom: 2px solid #206DDD;
+    border-bottom: 0.125rem solid var(--cor-principal);
 }
 
 .card-lista li {
     padding: 0.875rem 0;
-    border-bottom: 1px solid #CCE5FF;
+    border-bottom: 0.0625rem solid var(--cor-clara);
 }
 
-/* Número em destaque dentro dos cards */
 .numero {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #206DDD;
+    color: var(--cor-principal);
 }
 
-
-/* -- 4. Header e menu ----- */
+/* Header e menu */
 .site-header {
-    background-color: #206DDD;
+    background-color: var(--cor-principal);
 }
 
 .header-content {
@@ -233,33 +206,31 @@ ol {
 }
 
 .nav-list a {
-    color: #FFFFFF;
+    color: var(--cor-branca);
     text-decoration: none;
     padding: 0.375rem 0;
 }
 
-/* Link com o mouse em cima e link da página atual (.active) */
 .nav-list a:hover,
 .nav-list a.active {
-    border-bottom: 2px solid #FFFFFF;
+    border-bottom: 0.125rem solid var(--cor-branca);
 }
 
-/* Submenu de "Sobre o projeto" */
 .submenu {
-    position: relative; /* o submenu se posiciona a partir deste item */
+    position: relative;
 }
 
 .submenu-lista {
-    display: none; /* esconde até o mouse ficar em cima */
-    position: absolute; /* flutua sobre a página sem empurrar o conteúdo */
-    top: 100%; /* logo abaixo de "Sobre o projeto" */
+    display: none;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 12.5rem;
     padding: 0.5rem 0;
-    background-color: #FFFFFF;
-    border: 1px solid #CCE5FF;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(27, 42, 65, 0.15);
+    background-color: var(--cor-branca);
+    border: 0.0625rem solid var(--cor-clara);
+    border-radius: var(--raio-pequeno);
+    box-shadow: var(--sombra);
 }
 
 .submenu:hover .submenu-lista {
@@ -269,15 +240,14 @@ ol {
 .submenu-lista a {
     display: block;
     padding: 0.5rem 1rem;
-    color: #206DDD;
+    color: var(--cor-principal);
 }
 
 .submenu-lista a:hover {
     border-bottom: none;
-    background-color: #F2F8FF;
+    background-color: var(--cor-fundo-claro);
 }
 
-/* Botão do menu hambúrguer: escondido no desktop (aparece nas media queries) */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -288,24 +258,22 @@ ol {
     cursor: pointer;
 }
 
-/* As três barrinhas do ícone */
 .menu-toggle-barra {
     width: 1.75rem;
     height: 0.2rem;
-    background-color: #FFFFFF;
-    border-radius: 2px;
+    background-color: var(--cor-branca);
+    border-radius: 0.125rem;
 }
 
-
-/* ---------- 5. Footer ---------- */
+/* Footer */
 .site-footer {
-    background-color: #206DDD;
-    color: #FFFFFF;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
     padding: 3rem 0 1.5rem;
 }
 
 .site-footer p {
-    color: #FFFFFF;
+    color: var(--cor-branca);
     font-size: 0.875rem;
 }
 
@@ -314,7 +282,6 @@ ol {
     justify-content: space-between;
 }
 
-/* Texto de apresentação do rodapé */
 .footer-content p {
     width: 22.5rem;
 }
@@ -324,24 +291,21 @@ ol {
     margin-bottom: 0.5rem;
 }
 
-/* Duas colunas de links: Navegação e Nossa solução */
 .footer-nav {
     display: flex;
     gap: 4rem;
 }
 
-/* Títulos das colunas*/
 .footer-nav p {
     width: auto;
 }
 
-/* Links um embaixo do outro */
 .footer-links li {
     margin-bottom: 0.5rem;
 }
 
 .footer-links a {
-    color: #FFFFFF;
+    color: var(--cor-branca);
     text-decoration: none;
     font-size: 0.875rem;
 }
@@ -353,13 +317,12 @@ ol {
 .footer-bottom {
     margin-top: 2.5rem;
     padding-top: 1.25rem;
-    border-top: 1px solid #CCE5FF;
+    border-top: 0.0625rem solid var(--cor-clara);
 }
 
-
-/* ---------- 6. Página inicial ---------- */
+/* Página inicial */
 .hero {
-    background-color: #F2F8FF;
+    background-color: var(--cor-fundo-claro);
     padding: 6rem 0;
 }
 
@@ -374,10 +337,9 @@ ol {
 }
 
 .hero h1 span {
-    color: #206DDD;
+    color: var(--cor-principal);
 }
 
-/* Bolinha azul  */
 .passo {
     display: inline-block;
     width: 2.25rem;
@@ -385,36 +347,34 @@ ol {
     line-height: 2.25rem;
     text-align: center;
     border-radius: 50%;
-    background-color: #206DDD;
-    color: #FFFFFF;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-/* Faixa azul de chamada para doação */
 .cta-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2.5rem;
-    background-color: #206DDD;
-    border-radius: 16px;
+    background-color: var(--cor-principal);
+    border-radius: var(--raio-medio);
     padding: 3.5rem;
 }
 
 .cta-box h2,
 .cta-box p {
-    color: #FFFFFF;
+    color: var(--cor-branca);
 }
 
 .cta-box .btn-primary {
-    background-color: #FFFFFF;
-    color: #206DDD;
+    background-color: var(--cor-branca);
+    color: var(--cor-principal);
     white-space: nowrap;
 }
 
-
-/* ---------- 7. Sobre ---------- */
+/* Sobre */
 .about-block {
     align-items: center;
     margin-bottom: 4.5rem;
@@ -424,8 +384,7 @@ ol {
     margin-bottom: 1rem;
 }
 
-
-/* ---------- 8. Integrantes ---------- */
+/* Integrantes */
 .member-photo {
     width: 5.5rem;
     height: 5.5rem;
@@ -441,20 +400,19 @@ dt {
 }
 
 dd {
-    color: #4A5A70;
+    color: var(--cor-texto-secundario);
     margin-bottom: 1rem;
 }
 
-
-/* ---------- 9. FAQ ---------- */
+/* FAQ */
 .faq-list {
     width: 53.75rem;
     margin: 0 auto;
 }
 
 .faq-item {
-    border: 1px solid #CCE5FF;
-    border-radius: 8px;
+    border: 0.0625rem solid var(--cor-clara);
+    border-radius: var(--raio-pequeno);
     margin-bottom: 0.75rem;
 }
 
@@ -468,8 +426,7 @@ dd {
     padding: 0 1.5rem 1.25rem;
 }
 
-
-/* ---------- 10. Formulário (Contato) ---------- */
+/* Contato */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -484,62 +441,62 @@ dd {
 .form-group input,
 .form-group select,
 .form-group textarea {
-    font-family: "Gotham", Arial, sans-serif;
+    font-family: var(--fonte);
     font-size: 0.9375rem;
     padding: 0.625rem 0.625rem;
-    border: 1px solid #CCE5FF;
-    border-radius: 8px;
-    background-color: #FFFFFF;
+    border: 0.0625rem solid var(--cor-clara);
+    border-radius: var(--raio-pequeno);
+    background-color: var(--cor-branca);
 }
 
 .form-group textarea {
     height: 8.75rem;
 }
 
-/* Validação do formulário */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+}
+
 .form-group .campo-erro {
-    border-color: #D93025;
+    border-color: var(--cor-erro);
 }
 
 .mensagem-erro {
-    color: #D93025;
+    color: var(--cor-erro);
     font-size: 0.85rem;
     margin-top: 0.25rem;
 }
 
 .mensagem-sucesso {
-    color: #1E8E3E;
+    color: var(--cor-sucesso);
     font-weight: 700;
     margin-top: 1rem;
 }
 
-/* Cards empilhados na coluna lateral */
 aside .card {
     margin-bottom: 1.5rem;
 }
 
-
-/* ---------- 11. Páginas da solução (Problema e solução, Como doar e Assistente) ---------- */
-
-/* Botão dentro dos cards de doação */
+/* Páginas da solução */
 .botao-card {
     margin-top: 1.25rem;
 }
 
-/* Lista simples dentro dos cards */
 .lista-simples li {
     padding: 0.375rem 0;
-    color: #4A5A70;
+    color: var(--cor-texto-secundario);
 }
 
-/* Jornada do doador (página Problema e solução) */
 .jornada li {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     padding: 0.625rem 0;
-    border-bottom: 1px solid #CCE5FF;
-    color: #4A5A70;
+    border-bottom: 0.0625rem solid var(--cor-clara);
+    color: var(--cor-texto-secundario);
 }
 
 .jornada .passo {
@@ -547,23 +504,19 @@ aside .card {
     flex-shrink: 0;
 }
 
-/* Passo cinza: o caminho do site atual */
 .passo-cinza {
-    background-color: #4A5A70;
+    background-color: var(--cor-texto-secundario);
 }
 
-/* Janela do chat: o card sem espaçamento interno */
 .chat {
     padding: 0;
 }
 
-/* Topo do chat: ícone + nome do assistente */
 .chat-topo {
     padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid #CCE5FF;
+    border-bottom: 0.0625rem solid var(--cor-clara);
 }
 
-/* Ícone do assistente: círculo azul com as iniciais NL */
 .chat-avatar {
     display: inline-block;
     width: 3rem;
@@ -571,8 +524,8 @@ aside .card {
     line-height: 3rem;
     text-align: center;
     border-radius: 50%;
-    background-color: #206DDD;
-    color: #FFFFFF;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
     font-weight: 700;
     flex-shrink: 0;
 }
@@ -586,84 +539,52 @@ aside .card {
     margin-top: 0;
 }
 
-/* Área das mensagens: uma embaixo da outra, cada uma do tamanho do texto */
 .chat-mensagens {
     display: flex;
-    flex-direction: column; /* empilha as mensagens */
-    align-items: flex-start; /* cada balão fica do tamanho do seu texto */
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.5rem;
     padding: 1.25rem;
-    background-color: #F2F8FF;
+    background-color: var(--cor-fundo-claro);
 }
 
-/* Balão de mensagem */
 .msg {
     padding: 0.5rem 0.875rem;
-    border-radius: 16px;
+    border-radius: var(--raio-medio);
     font-size: 0.875rem;
     line-height: 1.5;
 }
 
-/* Mensagens do assistente: sobra sempre um espaço à direita */
 .msg-bot {
     margin-right: 15%;
+    background-color: var(--cor-branca);
+    border: 0.0625rem solid var(--cor-clara);
+    color: var(--cor-texto);
 }
 
-/* Mensagem do assistente */
-.msg-bot {
-    background-color: #FFFFFF;
-    border: 1px solid #CCE5FF;
-    color: #1B2A41;
-}
-
-/* Mensagem do usuário */
 .msg-usuario {
-    background-color: #206DDD;
-    color: #FFFFFF;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
     margin-left: auto;
 }
 
-/* Resumo dos dados dentro da mensagem */
-.msg-dados {
-    margin-top: 0.5rem;
-}
-
-/* Botões de resposta rápida */
 .chat-opcoes {
     gap: 0.5rem;
 }
 
 .opcao {
     padding: 0.25rem 0.75rem;
-    border: 1px solid #206DDD;
-    border-radius: 30px;
-    background-color: #FFFFFF;
-    color: #206DDD;
+    border: 0.0625rem solid var(--cor-principal);
+    border-radius: var(--raio-grande);
+    background-color: var(--cor-branca);
+    color: var(--cor-principal);
     font-size: 0.875rem;
 }
 
-/* Campo de mensagem (apenas visual nesta sprint) */
-.chat-campo {
-    padding: 1rem 1.5rem;
-    border-top: 1px solid #CCE5FF;
-}
-
-.chat-campo input {
-    width: 100%;
-    padding: 0.625rem 1rem;
-    border: 1px solid #CCE5FF;
-    border-radius: 30px;
-    font-family: "Gotham", Arial, sans-serif;
-    font-size: 0.9375rem;
-}
-
-
-/* ---------- 12. Media queries ---------- */
-
-/* Tablet e celular (até 991px): menu hambúrguer + layout de tablet */
+/* Media queries */
 @media (max-width: 991px) {
     .header-content {
-        flex-wrap: wrap; /* permite o menu descer para a linha de baixo */
+        flex-wrap: wrap;
         height: auto;
         min-height: 5rem;
         padding: 0.625rem 0;
@@ -673,7 +594,6 @@ aside .card {
         display: flex;
     }
 
-    /* Menu fechado por padrão; ocupa a largura toda quando aberto */
     .menu-principal {
         display: none;
         width: 100%;
@@ -694,7 +614,6 @@ aside .card {
         padding: 0.75rem 0;
     }
 
-    /* No toque não existe hover: o submenu aparece sempre, recuado */
     .submenu-lista {
         display: block;
         position: static;
@@ -706,7 +625,7 @@ aside .card {
     }
 
     .submenu-lista a {
-        color: #FFFFFF;
+        color: var(--cor-branca);
         padding: 0.625rem 0;
     }
 
@@ -714,9 +633,8 @@ aside .card {
         background-color: transparent;
     }
 
-    /* Layout de tablet: tudo um pouco menor e duas colunas por linha */
     html {
-        font-size: 93.75%; /* 15px: todos os rem diminuem juntos */
+        font-size: 93.75%;
     }
 
     .col-2,
@@ -725,7 +643,6 @@ aside .card {
         width: 47%;
     }
 
-    /* Faixa de doação e rodapé: um item embaixo do outro */
     .cta-box,
     .footer-content {
         flex-direction: column;
@@ -742,10 +659,9 @@ aside .card {
     }
 }
 
-/* Celular (até 767px): uma coluna */
 @media (max-width: 767px) {
     html {
-        font-size: 90%; /* 14,4px */
+        font-size: 90%;
     }
 
     .col-2,
@@ -768,14 +684,12 @@ aside .card {
         padding: 1.75rem 1.5rem;
     }
 
-    /* Itens lado a lado podem descer para a linha de baixo */
     .flex,
     .footer-nav {
         flex-wrap: wrap;
     }
 }
 
-/* Celulares pequenos (até 480px): botões com a largura toda */
 @media (max-width: 480px) {
     .flex .btn,
     .cta-box .btn {
@@ -784,14 +698,12 @@ aside .card {
     }
 }
 
-/* desktops (≥992px) */
 @media (min-width: 992px) {
     .container {
         width: 60rem;
     }
 }
 
-/* Telas grandes (≥1300px */
 @media (min-width: 1300px) {
     .container {
         width: 77.5rem;
