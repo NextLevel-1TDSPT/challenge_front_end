@@ -578,7 +578,25 @@ aside .card {
     border-radius: var(--raio-grande);
     background-color: var(--cor-branca);
     color: var(--cor-principal);
+    font-family: var(--fonte);
     font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.opcao:hover {
+    background-color: var(--cor-clara);
+}
+
+.chat-resposta {
+    display: none;
+}
+
+.chat-resposta.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
 }
 
 /* Media queries */
