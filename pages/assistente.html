@@ -13,10 +13,11 @@
 
     <title>Assistente | NextLevel</title>
     <script src="../js/menu.js" defer></script>
+    <script src="../js/assistente.js" defer></script>
   </head>
 
   <body>
-    <!-- ----- CABEÇALHO ----- -->
+    <!-- Cabeçalho -->
 
     <header class="site-header">
       <div class="container header-content">
@@ -27,7 +28,7 @@
           />
         </a>
 
-        <!-- Botão do menu hambúrguer: aparece só em telas menores (JS em js/menu.js) -->
+        <!-- Menu hambúrguer -->
         <button
           class="menu-toggle"
           type="button"
@@ -58,7 +59,7 @@
       </div>
     </header>
 
-    <!-- ------ CONTEÚDO PRINCIPAL ------ -->
+    <!-- Conteúdo principal -->
     <main>
       <!-- Título da página -->
 
@@ -77,7 +78,7 @@
 
       <section class="section">
         <div class="container linha">
-          <!-- Janela do chat  -->
+          <!-- Janela do chat -->
 
           <article class="card chat col-2" aria-label="Simulação de conversa">
             <div class="chat-topo flex">
@@ -93,9 +94,57 @@
                 Olá! Eu sou o assistente da Turma do Bem. Como você quer ajudar
                 hoje?
               </li>
-              <li class="chat-opcoes flex">
-                <button type="button" class="opcao" data-passo="doacao-comum">Doação comum</button>
-                <button type="button" class="opcao" data-passo="nota-fiscal">Nota Fiscal Paulista</button>
+              <li id="chat-inicio" class="chat-opcoes flex">
+                <button type="button" class="opcao" id="btn-doacao-comum">Doação comum</button>
+                <button type="button" class="opcao" id="btn-nota-fiscal">Nota Fiscal Paulista</button>
+              </li>
+
+              <li id="resposta-doacao-comum" class="chat-resposta">
+                <p class="msg msg-usuario">Doação comum</p>
+                <p class="msg msg-bot">
+                  A doação comum é feita direto no site da Turma do Bem, no
+                  valor que você quiser. Cada doação ajuda a levar tratamento
+                  odontológico gratuito para quem precisa.
+                </p>
+                <div class="chat-opcoes flex">
+                  <button type="button" class="opcao btn-voltar">Voltar ao início</button>
+                  <button type="button" class="opcao btn-finalizar">Finalizar</button>
+                </div>
+              </li>
+
+              <li id="resposta-nota-fiscal" class="chat-resposta">
+                <p class="msg msg-usuario">Nota Fiscal Paulista</p>
+                <p class="msg msg-bot">
+                  Com a Nota Fiscal Paulista, parte do imposto das suas compras
+                  vai para a Turma do Bem, sem custo para você. É só entrar no
+                  site da Nota Fiscal Paulista e escolher a Turma do Bem como
+                  entidade.
+                </p>
+                <div class="chat-opcoes flex">
+                  <button type="button" class="opcao" id="btn-cadastro">Quero me cadastrar</button>
+                  <button type="button" class="opcao btn-voltar">Voltar ao início</button>
+                </div>
+              </li>
+
+              <li id="resposta-cadastro" class="chat-resposta">
+                <p class="msg msg-usuario">Quero me cadastrar</p>
+                <p class="msg msg-bot">
+                  O cadastro de doador pelo assistente chega na próxima versão.
+                  Por enquanto, você pode falar com a gente pela página de
+                  <a href="contato.html">Contato</a>.
+                </p>
+                <div class="chat-opcoes flex">
+                  <button type="button" class="opcao btn-voltar">Voltar ao início</button>
+                  <button type="button" class="opcao btn-finalizar">Finalizar</button>
+                </div>
+              </li>
+
+              <li id="resposta-finalizar" class="chat-resposta">
+                <p class="msg msg-usuario">Finalizar</p>
+                <p class="msg msg-bot">
+                  Muito obrigado por usar o assistente da Turma do Bem.
+                  Esperamos contar com o seu apoio sempre!
+                </p>
               </li>
             </ol>
           </article>
@@ -131,7 +180,7 @@
       </section>
     </main>
 
-    <!-- ----- RODAPÉ ----- -->
+    <!-- Rodapé -->
 
     <footer class="site-footer">
       <div class="container">
