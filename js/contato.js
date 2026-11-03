@@ -35,7 +35,6 @@ function validarFormulario(evento) {
     limparErro(nome);
   }
 
-  /* Telefone é opcional, mas se preencher precisa ter DDD */
   if (telefone.value.trim() !== "" && telefone.value.trim().length < 10) {
     mostrarErro(telefone, "Digite um telefone válido com DDD.");
     formularioValido = false;
@@ -77,7 +76,6 @@ function validarFormulario(evento) {
 
 formContato.addEventListener("submit", validarFormulario);
 
-/* Apaga o erro do campo enquanto o usuário digita */
 const campos = formContato.querySelectorAll("input, select, textarea");
 
 campos.forEach(function (campo) {
